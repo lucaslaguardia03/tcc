@@ -1,0 +1,1 @@
+data_raw/siope_receitas.txt filter=lfs diff=lfs merge=lfs -text

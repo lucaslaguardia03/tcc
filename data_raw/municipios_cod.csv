@@ -1,0 +1,854 @@
+﻿ano;ente;cod_uf;sig_uf;cod_ibge;nom_ente
+2024;Municipal;31;MG;310010;Abadia dos Dourados
+2024;Municipal;31;MG;310020;Abaeté
+2024;Municipal;31;MG;310030;Abre Campo
+2024;Municipal;31;MG;310040;Acaiaca
+2024;Municipal;31;MG;310050;Açucena
+2024;Municipal;31;MG;310060;Água Boa
+2024;Municipal;31;MG;310070;Água Comprida
+2024;Municipal;31;MG;310080;Aguanil
+2024;Municipal;31;MG;310090;Águas Formosas
+2024;Municipal;31;MG;310100;Águas Vermelhas
+2024;Municipal;31;MG;310110;Aimorés
+2024;Municipal;31;MG;310120;Aiuruoca
+2024;Municipal;31;MG;310130;Alagoa
+2024;Municipal;31;MG;310140;Albertina
+2024;Municipal;31;MG;310150;Além Paraíba
+2024;Municipal;31;MG;310160;Alfenas
+2024;Municipal;31;MG;310163;Alfredo Vasconcelos
+2024;Municipal;31;MG;310170;Almenara
+2024;Municipal;31;MG;310180;Alpercata
+2024;Municipal;31;MG;310190;Alpinópolis
+2024;Municipal;31;MG;310200;Alterosa
+2024;Municipal;31;MG;310205;Alto Caparaó
+2024;Municipal;31;MG;310210;Alto Rio Doce
+2024;Municipal;31;MG;310220;Alvarenga
+2024;Municipal;31;MG;310230;Alvinópolis
+2024;Municipal;31;MG;310240;Alvorada de Minas
+2024;Municipal;31;MG;310250;Amparo do Serra
+2024;Municipal;31;MG;310260;Andradas
+2024;Municipal;31;MG;310270;Cachoeira de Pajeú
+2024;Municipal;31;MG;310280;Andrelândia
+2024;Municipal;31;MG;310285;Angelândia
+2024;Municipal;31;MG;310290;Antônio Carlos
+2024;Municipal;31;MG;310300;Antônio Dias
+2024;Municipal;31;MG;310310;Antônio Prado de Minas
+2024;Municipal;31;MG;310320;Araçaí
+2024;Municipal;31;MG;310330;Aracitaba
+2024;Municipal;31;MG;310340;Araçuaí
+2024;Municipal;31;MG;310350;Araguari
+2024;Municipal;31;MG;310360;Arantina
+2024;Municipal;31;MG;310370;Araponga
+2024;Municipal;31;MG;310375;Araporã
+2024;Municipal;31;MG;310380;Arapuá
+2024;Municipal;31;MG;310390;Araújos
+2024;Municipal;31;MG;310400;Araxá
+2024;Municipal;31;MG;310410;Arceburgo
+2024;Municipal;31;MG;310420;Arcos
+2024;Municipal;31;MG;310430;Areado
+2024;Municipal;31;MG;310440;Argirita
+2024;Municipal;31;MG;310445;Aricanduva
+2024;Municipal;31;MG;310450;Arinos
+2024;Municipal;31;MG;310460;Astolfo Dutra
+2024;Municipal;31;MG;310470;Ataléia
+2024;Municipal;31;MG;310480;Augusto de Lima
+2024;Municipal;31;MG;310490;Baependi
+2024;Municipal;31;MG;310500;Baldim
+2024;Municipal;31;MG;310510;Bambuí
+2024;Municipal;31;MG;310520;Bandeira
+2024;Municipal;31;MG;310530;Bandeira do Sul
+2024;Municipal;31;MG;310540;Barão de Cocais
+2024;Municipal;31;MG;310550;Barão de Monte Alto
+2024;Municipal;31;MG;310560;Barbacena
+2024;Municipal;31;MG;310570;Barra Longa
+2024;Municipal;31;MG;310590;Barroso
+2024;Municipal;31;MG;310600;Bela Vista de Minas
+2024;Municipal;31;MG;310610;Belmiro Braga
+2024;Municipal;31;MG;310620;Belo Horizonte
+2024;Municipal;31;MG;310630;Belo Oriente
+2024;Municipal;31;MG;310640;Belo Vale
+2024;Municipal;31;MG;310650;Berilo
+2024;Municipal;31;MG;310660;Bertópolis
+2024;Municipal;31;MG;310665;Berizal
+2024;Municipal;31;MG;310670;Betim
+2024;Municipal;31;MG;310680;Bias Fortes
+2024;Municipal;31;MG;310690;Bicas
+2024;Municipal;31;MG;310700;Biquinhas
+2024;Municipal;31;MG;310710;Boa Esperança
+2024;Municipal;31;MG;310720;Bocaina de Minas
+2024;Municipal;31;MG;310730;Bocaiúva
+2024;Municipal;31;MG;310740;Bom Despacho
+2024;Municipal;31;MG;310750;Bom Jardim de Minas
+2024;Municipal;31;MG;310760;Bom Jesus da Penha
+2024;Municipal;31;MG;310770;Bom Jesus do Amparo
+2024;Municipal;31;MG;310780;Bom Jesus do Galho
+2024;Municipal;31;MG;310790;Bom Repouso
+2024;Municipal;31;MG;310800;Bom Sucesso
+2024;Municipal;31;MG;310810;Bonfim
+2024;Municipal;31;MG;310820;Bonfinópolis de Minas
+2024;Municipal;31;MG;310825;Bonito de Minas
+2024;Municipal;31;MG;310830;Borda da Mata
+2024;Municipal;31;MG;310840;Botelhos
+2024;Municipal;31;MG;310850;Botumirim
+2024;Municipal;31;MG;310855;Brasilândia de Minas
+2024;Municipal;31;MG;310860;Brasília de Minas
+2024;Municipal;31;MG;310870;Brás Pires
+2024;Municipal;31;MG;310880;Braúnas
+2024;Municipal;31;MG;310890;Brasópolis
+2024;Municipal;31;MG;310900;Brumadinho
+2024;Municipal;31;MG;310910;Bueno Brandão
+2024;Municipal;31;MG;310920;Buenópolis
+2024;Municipal;31;MG;310925;Bugre
+2024;Municipal;31;MG;310930;Buritis
+2024;Municipal;31;MG;310940;Buritizeiro
+2024;Municipal;31;MG;310945;Cabeceira Grande
+2024;Municipal;31;MG;310950;Cabo Verde
+2024;Municipal;31;MG;310960;Cachoeira da Prata
+2024;Municipal;31;MG;310970;Cachoeira de Minas
+2024;Municipal;31;MG;310980;Cachoeira Dourada
+2024;Municipal;31;MG;310990;Caetanópolis
+2024;Municipal;31;MG;311000;Caeté
+2024;Municipal;31;MG;311010;Caiana
+2024;Municipal;31;MG;311020;Cajuri
+2024;Municipal;31;MG;311030;Caldas
+2024;Municipal;31;MG;311040;Camacho
+2024;Municipal;31;MG;311050;Camanducaia
+2024;Municipal;31;MG;311060;Cambuí
+2024;Municipal;31;MG;311070;Cambuquira
+2024;Municipal;31;MG;311080;Campanário
+2024;Municipal;31;MG;311090;Campanha
+2024;Municipal;31;MG;311100;Campestre
+2024;Municipal;31;MG;311110;Campina Verde
+2024;Municipal;31;MG;311115;Campo Azul
+2024;Municipal;31;MG;311120;Campo Belo
+2024;Municipal;31;MG;311130;Campo do Meio
+2024;Municipal;31;MG;311140;Campo Florido
+2024;Municipal;31;MG;311150;Campos Altos
+2024;Municipal;31;MG;311160;Campos Gerais
+2024;Municipal;31;MG;311170;Canaã
+2024;Municipal;31;MG;311180;Canápolis
+2024;Municipal;31;MG;311190;Cana Verde
+2024;Municipal;31;MG;311200;Candeias
+2024;Municipal;31;MG;311205;Cantagalo
+2024;Municipal;31;MG;311210;Caparaó
+2024;Municipal;31;MG;311220;Capela Nova
+2024;Municipal;31;MG;311230;Capelinha
+2024;Municipal;31;MG;311240;Capetinga
+2024;Municipal;31;MG;311250;Capim Branco
+2024;Municipal;31;MG;311260;Capinópolis
+2024;Municipal;31;MG;311265;Capitão Andrade
+2024;Municipal;31;MG;311270;Capitão Enéas
+2024;Municipal;31;MG;311280;Capitólio
+2024;Municipal;31;MG;311290;Caputira
+2024;Municipal;31;MG;311300;Caraí
+2024;Municipal;31;MG;311310;Caranaíba
+2024;Municipal;31;MG;311320;Carandaí
+2024;Municipal;31;MG;311330;Carangola
+2024;Municipal;31;MG;311340;Caratinga
+2024;Municipal;31;MG;311350;Carbonita
+2024;Municipal;31;MG;311360;Careaçu
+2024;Municipal;31;MG;311370;Carlos Chagas
+2024;Municipal;31;MG;311380;Carmésia
+2024;Municipal;31;MG;311390;Carmo da Cachoeira
+2024;Municipal;31;MG;311400;Carmo da Mata
+2024;Municipal;31;MG;311410;Carmo de Minas
+2024;Municipal;31;MG;311420;Carmo do Cajuru
+2024;Municipal;31;MG;311430;Carmo do Paranaíba
+2024;Municipal;31;MG;311440;Carmo do Rio Claro
+2024;Municipal;31;MG;311450;Carmópolis de Minas
+2024;Municipal;31;MG;311455;Carneirinho
+2024;Municipal;31;MG;311460;Carrancas
+2024;Municipal;31;MG;311470;Carvalhópolis
+2024;Municipal;31;MG;311480;Carvalhos
+2024;Municipal;31;MG;311490;Casa Grande
+2024;Municipal;31;MG;311500;Cascalho Rico
+2024;Municipal;31;MG;311510;Cássia
+2024;Municipal;31;MG;311520;Conceição da Barra de Minas
+2024;Municipal;31;MG;311530;Cataguases
+2024;Municipal;31;MG;311535;Catas Altas
+2024;Municipal;31;MG;311540;Catas Altas da Noruega
+2024;Municipal;31;MG;311545;Catuji
+2024;Municipal;31;MG;311547;Catuti
+2024;Municipal;31;MG;311550;Caxambu
+2024;Municipal;31;MG;311560;Cedro do Abaeté
+2024;Municipal;31;MG;311570;Central de Minas
+2024;Municipal;31;MG;311580;Centralina
+2024;Municipal;31;MG;311590;Chácara
+2024;Municipal;31;MG;311600;Chalé
+2024;Municipal;31;MG;311610;Chapada do Norte
+2024;Municipal;31;MG;311615;Chapada Gaúcha
+2024;Municipal;31;MG;311620;Chiador
+2024;Municipal;31;MG;311630;Cipotânea
+2024;Municipal;31;MG;311640;Claraval
+2024;Municipal;31;MG;311650;Claro dos Poções
+2024;Municipal;31;MG;311660;Cláudio
+2024;Municipal;31;MG;311670;Coimbra
+2024;Municipal;31;MG;311680;Coluna
+2024;Municipal;31;MG;311690;Comendador Gomes
+2024;Municipal;31;MG;311700;Comercinho
+2024;Municipal;31;MG;311710;Conceição da Aparecida
+2024;Municipal;31;MG;311720;Conceição das Pedras
+2024;Municipal;31;MG;311730;Conceição das Alagoas
+2024;Municipal;31;MG;311740;Conceição de Ipanema
+2024;Municipal;31;MG;311750;Conceição do Mato Dentro
+2024;Municipal;31;MG;311760;Conceição do Pará
+2024;Municipal;31;MG;311770;Conceição do Rio Verde
+2024;Municipal;31;MG;311780;Conceição dos Ouros
+2024;Municipal;31;MG;311783;Cônego Marinho
+2024;Municipal;31;MG;311787;Confins
+2024;Municipal;31;MG;311790;Congonhal
+2024;Municipal;31;MG;311800;Congonhas
+2024;Municipal;31;MG;311810;Congonhas do Norte
+2024;Municipal;31;MG;311820;Conquista
+2024;Municipal;31;MG;311830;Conselheiro Lafaiete
+2024;Municipal;31;MG;311840;Conselheiro Pena
+2024;Municipal;31;MG;311850;Consolação
+2024;Municipal;31;MG;311860;Contagem
+2024;Municipal;31;MG;311870;Coqueiral
+2024;Municipal;31;MG;311880;Coração de Jesus
+2024;Municipal;31;MG;311890;Cordisburgo
+2024;Municipal;31;MG;311900;Cordislândia
+2024;Municipal;31;MG;311910;Corinto
+2024;Municipal;31;MG;311920;Coroaci
+2024;Municipal;31;MG;311930;Coromandel
+2024;Municipal;31;MG;311940;Coronel Fabriciano
+2024;Municipal;31;MG;311950;Coronel Murta
+2024;Municipal;31;MG;311960;Coronel Pacheco
+2024;Municipal;31;MG;311970;Coronel Xavier Chaves
+2024;Municipal;31;MG;311980;Córrego Danta
+2024;Municipal;31;MG;311990;Córrego do Bom Jesus
+2024;Municipal;31;MG;311995;Córrego Fundo
+2024;Municipal;31;MG;312000;Córrego Novo
+2024;Municipal;31;MG;312010;Couto de Magalhães de Minas
+2024;Municipal;31;MG;312015;Crisólita
+2024;Municipal;31;MG;312020;Cristais
+2024;Municipal;31;MG;312030;Cristália
+2024;Municipal;31;MG;312040;Cristiano Otoni
+2024;Municipal;31;MG;312050;Cristina
+2024;Municipal;31;MG;312060;Crucilândia
+2024;Municipal;31;MG;312070;Cruzeiro da Fortaleza
+2024;Municipal;31;MG;312080;Cruzília
+2024;Municipal;31;MG;312083;Cuparaque
+2024;Municipal;31;MG;312087;Curral de Dentro
+2024;Municipal;31;MG;312090;Curvelo
+2024;Municipal;31;MG;312100;Datas
+2024;Municipal;31;MG;312110;Delfim Moreira
+2024;Municipal;31;MG;312120;Delfinópolis
+2024;Municipal;31;MG;312125;Delta
+2024;Municipal;31;MG;312130;Descoberto
+2024;Municipal;31;MG;312140;Desterro de Entre Rios
+2024;Municipal;31;MG;312150;Desterro do Melo
+2024;Municipal;31;MG;312160;Diamantina
+2024;Municipal;31;MG;312170;Diogo de Vasconcelos
+2024;Municipal;31;MG;312180;Dionísio
+2024;Municipal;31;MG;312190;Divinésia
+2024;Municipal;31;MG;312200;Divino
+2024;Municipal;31;MG;312210;Divino das Laranjeiras
+2024;Municipal;31;MG;312220;Divinolândia de Minas
+2024;Municipal;31;MG;312230;Divinópolis
+2024;Municipal;31;MG;312235;Divisa Alegre
+2024;Municipal;31;MG;312240;Divisa Nova
+2024;Municipal;31;MG;312245;Divisópolis
+2024;Municipal;31;MG;312247;Dom Bosco
+2024;Municipal;31;MG;312250;Dom Cavati
+2024;Municipal;31;MG;312260;Dom Joaquim
+2024;Municipal;31;MG;312270;Dom Silvério
+2024;Municipal;31;MG;312280;Dom Viçoso
+2024;Municipal;31;MG;312290;Dona Eusébia
+2024;Municipal;31;MG;312300;Dores de Campos
+2024;Municipal;31;MG;312310;Dores de Guanhães
+2024;Municipal;31;MG;312320;Dores do Indaiá
+2024;Municipal;31;MG;312330;Dores do Turvo
+2024;Municipal;31;MG;312340;Doresópolis
+2024;Municipal;31;MG;312350;Douradoquara
+2024;Municipal;31;MG;312352;Durandé
+2024;Municipal;31;MG;312360;Elói Mendes
+2024;Municipal;31;MG;312370;Engenheiro Caldas
+2024;Municipal;31;MG;312380;Engenheiro Navarro
+2024;Municipal;31;MG;312385;Entre Folhas
+2024;Municipal;31;MG;312390;Entre Rios de Minas
+2024;Municipal;31;MG;312400;Ervália
+2024;Municipal;31;MG;312410;Esmeraldas
+2024;Municipal;31;MG;312420;Espera Feliz
+2024;Municipal;31;MG;312430;Espinosa
+2024;Municipal;31;MG;312440;Espírito Santo do Dourado
+2024;Municipal;31;MG;312450;Estiva
+2024;Municipal;31;MG;312460;Estrela Dalva
+2024;Municipal;31;MG;312470;Estrela do Indaiá
+2024;Municipal;31;MG;312480;Estrela do Sul
+2024;Municipal;31;MG;312490;Eugenópolis
+2024;Municipal;31;MG;312500;Ewbank da Câmara
+2024;Municipal;31;MG;312510;Extrema
+2024;Municipal;31;MG;312520;Fama
+2024;Municipal;31;MG;312530;Faria Lemos
+2024;Municipal;31;MG;312540;Felício dos Santos
+2024;Municipal;31;MG;312550;São Gonçalo do Rio Preto
+2024;Municipal;31;MG;312560;Felisburgo
+2024;Municipal;31;MG;312570;Felixlândia
+2024;Municipal;31;MG;312580;Fernandes Tourinho
+2024;Municipal;31;MG;312590;Ferros
+2024;Municipal;31;MG;312595;Fervedouro
+2024;Municipal;31;MG;312600;Florestal
+2024;Municipal;31;MG;312610;Formiga
+2024;Municipal;31;MG;312620;Formoso
+2024;Municipal;31;MG;312630;Fortaleza de Minas
+2024;Municipal;31;MG;312640;Fortuna de Minas
+2024;Municipal;31;MG;312650;Francisco Badaró
+2024;Municipal;31;MG;312660;Francisco Dumont
+2024;Municipal;31;MG;312670;Francisco Sá
+2024;Municipal;31;MG;312675;Franciscópolis
+2024;Municipal;31;MG;312680;Frei Gaspar
+2024;Municipal;31;MG;312690;Frei Inocêncio
+2024;Municipal;31;MG;312695;Frei Lagonegro
+2024;Municipal;31;MG;312700;Fronteira
+2024;Municipal;31;MG;312705;Fronteira dos Vales
+2024;Municipal;31;MG;312707;Fruta de Leite
+2024;Municipal;31;MG;312710;Frutal
+2024;Municipal;31;MG;312720;Funilândia
+2024;Municipal;31;MG;312730;Galiléia
+2024;Municipal;31;MG;312733;Gameleiras
+2024;Municipal;31;MG;312735;Glaucilândia
+2024;Municipal;31;MG;312737;Goiabeira
+2024;Municipal;31;MG;312738;Goianá
+2024;Municipal;31;MG;312740;Gonçalves
+2024;Municipal;31;MG;312750;Gonzaga
+2024;Municipal;31;MG;312760;Gouveia
+2024;Municipal;31;MG;312770;Governador Valadares
+2024;Municipal;31;MG;312780;Grão Mogol
+2024;Municipal;31;MG;312790;Grupiara
+2024;Municipal;31;MG;312800;Guanhães
+2024;Municipal;31;MG;312810;Guapé
+2024;Municipal;31;MG;312820;Guaraciaba
+2024;Municipal;31;MG;312825;Guaraciama
+2024;Municipal;31;MG;312830;Guaranésia
+2024;Municipal;31;MG;312840;Guarani
+2024;Municipal;31;MG;312850;Guarará
+2024;Municipal;31;MG;312860;Guarda-Mor
+2024;Municipal;31;MG;312870;Guaxupé
+2024;Municipal;31;MG;312880;Guidoval
+2024;Municipal;31;MG;312890;Guimarânia
+2024;Municipal;31;MG;312900;Guiricema
+2024;Municipal;31;MG;312910;Gurinhatã
+2024;Municipal;31;MG;312920;Heliodora
+2024;Municipal;31;MG;312930;Iapu
+2024;Municipal;31;MG;312940;Ibertioga
+2024;Municipal;31;MG;312950;Ibiá
+2024;Municipal;31;MG;312960;Ibiaí
+2024;Municipal;31;MG;312965;Ibiracatu
+2024;Municipal;31;MG;312970;Ibiraci
+2024;Municipal;31;MG;312980;Ibirité
+2024;Municipal;31;MG;312990;Ibitiúra de Minas
+2024;Municipal;31;MG;313000;Ibituruna
+2024;Municipal;31;MG;313005;Icaraí de Minas
+2024;Municipal;31;MG;313010;Igarapé
+2024;Municipal;31;MG;313020;Igaratinga
+2024;Municipal;31;MG;313030;Iguatama
+2024;Municipal;31;MG;313040;Ijaci
+2024;Municipal;31;MG;313050;Ilicínea
+2024;Municipal;31;MG;313055;Imbé de Minas
+2024;Municipal;31;MG;313060;Inconfidentes
+2024;Municipal;31;MG;313065;Indaiabira
+2024;Municipal;31;MG;313070;Indianópolis
+2024;Municipal;31;MG;313080;Ingaí
+2024;Municipal;31;MG;313090;Inhapim
+2024;Municipal;31;MG;313100;Inhaúma
+2024;Municipal;31;MG;313110;Inimutaba
+2024;Municipal;31;MG;313115;Ipaba
+2024;Municipal;31;MG;313120;Ipanema
+2024;Municipal;31;MG;313130;Ipatinga
+2024;Municipal;31;MG;313140;Ipiaçu
+2024;Municipal;31;MG;313150;Ipuiúna
+2024;Municipal;31;MG;313160;Iraí de Minas
+2024;Municipal;31;MG;313170;Itabira
+2024;Municipal;31;MG;313180;Itabirinha
+2024;Municipal;31;MG;313190;Itabirito
+2024;Municipal;31;MG;313200;Itacambira
+2024;Municipal;31;MG;313210;Itacarambi
+2024;Municipal;31;MG;313220;Itaguara
+2024;Municipal;31;MG;313230;Itaipé
+2024;Municipal;31;MG;313240;Itajubá
+2024;Municipal;31;MG;313250;Itamarandiba
+2024;Municipal;31;MG;313260;Itamarati de Minas
+2024;Municipal;31;MG;313270;Itambacuri
+2024;Municipal;31;MG;313280;Itambé do Mato Dentro
+2024;Municipal;31;MG;313290;Itamogi
+2024;Municipal;31;MG;313300;Itamonte
+2024;Municipal;31;MG;313310;Itanhandu
+2024;Municipal;31;MG;313320;Itanhomi
+2024;Municipal;31;MG;313330;Itaobim
+2024;Municipal;31;MG;313340;Itapagipe
+2024;Municipal;31;MG;313350;Itapecerica
+2024;Municipal;31;MG;313360;Itapeva
+2024;Municipal;31;MG;313370;Itatiaiuçu
+2024;Municipal;31;MG;313375;Itaú de Minas
+2024;Municipal;31;MG;313380;Itaúna
+2024;Municipal;31;MG;313390;Itaverava
+2024;Municipal;31;MG;313400;Itinga
+2024;Municipal;31;MG;313410;Itueta
+2024;Municipal;31;MG;313420;Ituiutaba
+2024;Municipal;31;MG;313430;Itumirim
+2024;Municipal;31;MG;313440;Iturama
+2024;Municipal;31;MG;313450;Itutinga
+2024;Municipal;31;MG;313460;Jaboticatubas
+2024;Municipal;31;MG;313470;Jacinto
+2024;Municipal;31;MG;313480;Jacuí
+2024;Municipal;31;MG;313490;Jacutinga
+2024;Municipal;31;MG;313500;Jaguaraçu
+2024;Municipal;31;MG;313505;Jaíba
+2024;Municipal;31;MG;313507;Jampruca
+2024;Municipal;31;MG;313510;Janaúba
+2024;Municipal;31;MG;313520;Januária
+2024;Municipal;31;MG;313530;Japaraíba
+2024;Municipal;31;MG;313535;Japonvar
+2024;Municipal;31;MG;313540;Jeceaba
+2024;Municipal;31;MG;313545;Jenipapo de Minas
+2024;Municipal;31;MG;313550;Jequeri
+2024;Municipal;31;MG;313560;Jequitaí
+2024;Municipal;31;MG;313570;Jequitibá
+2024;Municipal;31;MG;313580;Jequitinhonha
+2024;Municipal;31;MG;313590;Jesuânia
+2024;Municipal;31;MG;313600;Joaíma
+2024;Municipal;31;MG;313610;Joanésia
+2024;Municipal;31;MG;313620;João Monlevade
+2024;Municipal;31;MG;313630;João Pinheiro
+2024;Municipal;31;MG;313640;Joaquim Felício
+2024;Municipal;31;MG;313650;Jordânia
+2024;Municipal;31;MG;313652;José Gonçalves de Minas
+2024;Municipal;31;MG;313655;José Raydan
+2024;Municipal;31;MG;313657;Josenópolis
+2024;Municipal;31;MG;313660;Nova União
+2024;Municipal;31;MG;313665;Juatuba
+2024;Municipal;31;MG;313670;Juiz de Fora
+2024;Municipal;31;MG;313680;Juramento
+2024;Municipal;31;MG;313690;Juruaia
+2024;Municipal;31;MG;313695;Juvenília
+2024;Municipal;31;MG;313700;Ladainha
+2024;Municipal;31;MG;313710;Lagamar
+2024;Municipal;31;MG;313720;Lagoa da Prata
+2024;Municipal;31;MG;313730;Lagoa dos Patos
+2024;Municipal;31;MG;313740;Lagoa Dourada
+2024;Municipal;31;MG;313750;Lagoa Formosa
+2024;Municipal;31;MG;313753;Lagoa Grande
+2024;Municipal;31;MG;313760;Lagoa Santa
+2024;Municipal;31;MG;313770;Lajinha
+2024;Municipal;31;MG;313780;Lambari
+2024;Municipal;31;MG;313790;Lamim
+2024;Municipal;31;MG;313800;Laranjal
+2024;Municipal;31;MG;313810;Lassance
+2024;Municipal;31;MG;313820;Lavras
+2024;Municipal;31;MG;313830;Leandro Ferreira
+2024;Municipal;31;MG;313835;Leme do Prado
+2024;Municipal;31;MG;313840;Leopoldina
+2024;Municipal;31;MG;313850;Liberdade
+2024;Municipal;31;MG;313860;Lima Duarte
+2024;Municipal;31;MG;313862;Limeira do Oeste
+2024;Municipal;31;MG;313865;Lontra
+2024;Municipal;31;MG;313867;Luisburgo
+2024;Municipal;31;MG;313868;Luislândia
+2024;Municipal;31;MG;313870;Luminárias
+2024;Municipal;31;MG;313880;Luz
+2024;Municipal;31;MG;313890;Machacalis
+2024;Municipal;31;MG;313900;Machado
+2024;Municipal;31;MG;313910;Madre de Deus de Minas
+2024;Municipal;31;MG;313920;Malacacheta
+2024;Municipal;31;MG;313925;Mamonas
+2024;Municipal;31;MG;313930;Manga
+2024;Municipal;31;MG;313940;Manhuaçu
+2024;Municipal;31;MG;313950;Manhumirim
+2024;Municipal;31;MG;313960;Mantena
+2024;Municipal;31;MG;313970;Maravilhas
+2024;Municipal;31;MG;313980;Mar de Espanha
+2024;Municipal;31;MG;313990;Maria da Fé
+2024;Municipal;31;MG;314000;Mariana
+2024;Municipal;31;MG;314010;Marilac
+2024;Municipal;31;MG;314015;Mário Campos
+2024;Municipal;31;MG;314020;Maripá de Minas
+2024;Municipal;31;MG;314030;Marliéria
+2024;Municipal;31;MG;314040;Marmelópolis
+2024;Municipal;31;MG;314050;Martinho Campos
+2024;Municipal;31;MG;314053;Martins Soares
+2024;Municipal;31;MG;314055;Mata Verde
+2024;Municipal;31;MG;314060;Materlândia
+2024;Municipal;31;MG;314070;Mateus Leme
+2024;Municipal;31;MG;314080;Matias Barbosa
+2024;Municipal;31;MG;314085;Matias Cardoso
+2024;Municipal;31;MG;314090;Matipó
+2024;Municipal;31;MG;314100;Mato Verde
+2024;Municipal;31;MG;314110;Matozinhos
+2024;Municipal;31;MG;314120;Matutina
+2024;Municipal;31;MG;314130;Medeiros
+2024;Municipal;31;MG;314140;Medina
+2024;Municipal;31;MG;314150;Mendes Pimentel
+2024;Municipal;31;MG;314160;Mercês
+2024;Municipal;31;MG;314170;Mesquita
+2024;Municipal;31;MG;314180;Minas Novas
+2024;Municipal;31;MG;314190;Minduri
+2024;Municipal;31;MG;314200;Mirabela
+2024;Municipal;31;MG;314210;Miradouro
+2024;Municipal;31;MG;314220;Miraí
+2024;Municipal;31;MG;314225;Miravânia
+2024;Municipal;31;MG;314230;Moeda
+2024;Municipal;31;MG;314240;Moema
+2024;Municipal;31;MG;314250;Monjolos
+2024;Municipal;31;MG;314260;Monsenhor Paulo
+2024;Municipal;31;MG;314270;Montalvânia
+2024;Municipal;31;MG;314280;Monte Alegre de Minas
+2024;Municipal;31;MG;314290;Monte Azul
+2024;Municipal;31;MG;314300;Monte Belo
+2024;Municipal;31;MG;314310;Monte Carmelo
+2024;Municipal;31;MG;314315;Monte Formoso
+2024;Municipal;31;MG;314320;Monte Santo de Minas
+2024;Municipal;31;MG;314330;Montes Claros
+2024;Municipal;31;MG;314340;Monte Sião
+2024;Municipal;31;MG;314345;Montezuma
+2024;Municipal;31;MG;314350;Morada Nova de Minas
+2024;Municipal;31;MG;314360;Morro da Garça
+2024;Municipal;31;MG;314370;Morro do Pilar
+2024;Municipal;31;MG;314380;Munhoz
+2024;Municipal;31;MG;314390;Muriaé
+2024;Municipal;31;MG;314400;Mutum
+2024;Municipal;31;MG;314410;Muzambinho
+2024;Municipal;31;MG;314420;Nacip Raydan
+2024;Municipal;31;MG;314430;Nanuque
+2024;Municipal;31;MG;314435;Naque
+2024;Municipal;31;MG;314437;Natalândia
+2024;Municipal;31;MG;314440;Natércia
+2024;Municipal;31;MG;314450;Nazareno
+2024;Municipal;31;MG;314460;Nepomuceno
+2024;Municipal;31;MG;314465;Ninheira
+2024;Municipal;31;MG;314467;Nova Belém
+2024;Municipal;31;MG;314470;Nova Era
+2024;Municipal;31;MG;314480;Nova Lima
+2024;Municipal;31;MG;314490;Nova Módica
+2024;Municipal;31;MG;314500;Nova Ponte
+2024;Municipal;31;MG;314505;Nova Porteirinha
+2024;Municipal;31;MG;314510;Nova Resende
+2024;Municipal;31;MG;314520;Nova Serrana
+2024;Municipal;31;MG;314530;Novo Cruzeiro
+2024;Municipal;31;MG;314535;Novo Oriente de Minas
+2024;Municipal;31;MG;314537;Novorizonte
+2024;Municipal;31;MG;314540;Olaria
+2024;Municipal;31;MG;314545;Olhos-dÁgua
+2024;Municipal;31;MG;314550;Olímpio Noronha
+2024;Municipal;31;MG;314560;Oliveira
+2024;Municipal;31;MG;314570;Oliveira Fortes
+2024;Municipal;31;MG;314580;Onça de Pitangui
+2024;Municipal;31;MG;314585;Oratórios
+2024;Municipal;31;MG;314587;Orizânia
+2024;Municipal;31;MG;314590;Ouro Branco
+2024;Municipal;31;MG;314600;Ouro Fino
+2024;Municipal;31;MG;314610;Ouro Preto
+2024;Municipal;31;MG;314620;Ouro Verde de Minas
+2024;Municipal;31;MG;314625;Padre Carvalho
+2024;Municipal;31;MG;314630;Padre Paraíso
+2024;Municipal;31;MG;314640;Paineiras
+2024;Municipal;31;MG;314650;Pains
+2024;Municipal;31;MG;314655;Pai Pedro
+2024;Municipal;31;MG;314660;Paiva
+2024;Municipal;31;MG;314670;Palma
+2024;Municipal;31;MG;314675;Palmópolis
+2024;Municipal;31;MG;314690;Papagaios
+2024;Municipal;31;MG;314700;Paracatu
+2024;Municipal;31;MG;314710;Pará de Minas
+2024;Municipal;31;MG;314720;Paraguaçu
+2024;Municipal;31;MG;314730;Paraisópolis
+2024;Municipal;31;MG;314740;Paraopeba
+2024;Municipal;31;MG;314750;Passabém
+2024;Municipal;31;MG;314760;Passa Quatro
+2024;Municipal;31;MG;314770;Passa Tempo
+2024;Municipal;31;MG;314780;Passa-Vinte
+2024;Municipal;31;MG;314790;Passos
+2024;Municipal;31;MG;314795;Patis
+2024;Municipal;31;MG;314800;Patos de Minas
+2024;Municipal;31;MG;314810;Patrocínio
+2024;Municipal;31;MG;314820;Patrocínio do Muriaé
+2024;Municipal;31;MG;314830;Paula Cândido
+2024;Municipal;31;MG;314840;Paulistas
+2024;Municipal;31;MG;314850;Pavão
+2024;Municipal;31;MG;314860;Peçanha
+2024;Municipal;31;MG;314870;Pedra Azul
+2024;Municipal;31;MG;314875;Pedra Bonita
+2024;Municipal;31;MG;314880;Pedra do Anta
+2024;Municipal;31;MG;314890;Pedra do Indaiá
+2024;Municipal;31;MG;314900;Pedra Dourada
+2024;Municipal;31;MG;314910;Pedralva
+2024;Municipal;31;MG;314915;Pedras de Maria da Cruz
+2024;Municipal;31;MG;314920;Pedrinópolis
+2024;Municipal;31;MG;314930;Pedro Leopoldo
+2024;Municipal;31;MG;314940;Pedro Teixeira
+2024;Municipal;31;MG;314950;Pequeri
+2024;Municipal;31;MG;314960;Pequi
+2024;Municipal;31;MG;314970;Perdigão
+2024;Municipal;31;MG;314980;Perdizes
+2024;Municipal;31;MG;314990;Perdões
+2024;Municipal;31;MG;314995;Periquito
+2024;Municipal;31;MG;315000;Pescador
+2024;Municipal;31;MG;315010;Piau
+2024;Municipal;31;MG;315015;Piedade de Caratinga
+2024;Municipal;31;MG;315020;Piedade de Ponte Nova
+2024;Municipal;31;MG;315030;Piedade do Rio Grande
+2024;Municipal;31;MG;315040;Piedade dos Gerais
+2024;Municipal;31;MG;315050;Pimenta
+2024;Municipal;31;MG;315053;Pingo-dÁgua
+2024;Municipal;31;MG;315057;Pintópolis
+2024;Municipal;31;MG;315060;Piracema
+2024;Municipal;31;MG;315070;Pirajuba
+2024;Municipal;31;MG;315080;Piranga
+2024;Municipal;31;MG;315090;Piranguçu
+2024;Municipal;31;MG;315100;Piranguinho
+2024;Municipal;31;MG;315110;Pirapetinga
+2024;Municipal;31;MG;315120;Pirapora
+2024;Municipal;31;MG;315130;Piraúba
+2024;Municipal;31;MG;315140;Pitangui
+2024;Municipal;31;MG;315150;Piumhi
+2024;Municipal;31;MG;315160;Planura
+2024;Municipal;31;MG;315170;Poço Fundo
+2024;Municipal;31;MG;315180;Poços de Caldas
+2024;Municipal;31;MG;315190;Pocrane
+2024;Municipal;31;MG;315200;Pompéu
+2024;Municipal;31;MG;315210;Ponte Nova
+2024;Municipal;31;MG;315213;Ponto Chique
+2024;Municipal;31;MG;315217;Ponto dos Volantes
+2024;Municipal;31;MG;315220;Porteirinha
+2024;Municipal;31;MG;315230;Porto Firme
+2024;Municipal;31;MG;315240;Poté
+2024;Municipal;31;MG;315250;Pouso Alegre
+2024;Municipal;31;MG;315260;Pouso Alto
+2024;Municipal;31;MG;315270;Prados
+2024;Municipal;31;MG;315280;Prata
+2024;Municipal;31;MG;315290;Pratápolis
+2024;Municipal;31;MG;315300;Pratinha
+2024;Municipal;31;MG;315310;Presidente Bernardes
+2024;Municipal;31;MG;315320;Presidente Juscelino
+2024;Municipal;31;MG;315330;Presidente Kubitschek
+2024;Municipal;31;MG;315340;Presidente Olegário
+2024;Municipal;31;MG;315350;Alto Jequitibá
+2024;Municipal;31;MG;315360;Prudente de Morais
+2024;Municipal;31;MG;315370;Quartel Geral
+2024;Municipal;31;MG;315380;Queluzito
+2024;Municipal;31;MG;315390;Raposos
+2024;Municipal;31;MG;315400;Raul Soares
+2024;Municipal;31;MG;315410;Recreio
+2024;Municipal;31;MG;315415;Reduto
+2024;Municipal;31;MG;315420;Resende Costa
+2024;Municipal;31;MG;315430;Resplendor
+2024;Municipal;31;MG;315440;Ressaquinha
+2024;Municipal;31;MG;315445;Riachinho
+2024;Municipal;31;MG;315450;Riacho dos Machados
+2024;Municipal;31;MG;315460;Ribeirão das Neves
+2024;Municipal;31;MG;315470;Ribeirão Vermelho
+2024;Municipal;31;MG;315480;Rio Acima
+2024;Municipal;31;MG;315490;Rio Casca
+2024;Municipal;31;MG;315500;Rio Doce
+2024;Municipal;31;MG;315510;Rio do Prado
+2024;Municipal;31;MG;315520;Rio Espera
+2024;Municipal;31;MG;315530;Rio Manso
+2024;Municipal;31;MG;315540;Rio Novo
+2024;Municipal;31;MG;315550;Rio Paranaíba
+2024;Municipal;31;MG;315560;Rio Pardo de Minas
+2024;Municipal;31;MG;315570;Rio Piracicaba
+2024;Municipal;31;MG;315580;Rio Pomba
+2024;Municipal;31;MG;315590;Rio Preto
+2024;Municipal;31;MG;315600;Rio Vermelho
+2024;Municipal;31;MG;315610;Ritápolis
+2024;Municipal;31;MG;315620;Rochedo de Minas
+2024;Municipal;31;MG;315630;Rodeiro
+2024;Municipal;31;MG;315640;Romaria
+2024;Municipal;31;MG;315645;Rosário da Limeira
+2024;Municipal;31;MG;315650;Rubelita
+2024;Municipal;31;MG;315660;Rubim
+2024;Municipal;31;MG;315670;Sabará
+2024;Municipal;31;MG;315680;Sabinópolis
+2024;Municipal;31;MG;315690;Sacramento
+2024;Municipal;31;MG;315700;Salinas
+2024;Municipal;31;MG;315710;Salto da Divisa
+2024;Municipal;31;MG;315720;Santa Bárbara
+2024;Municipal;31;MG;315725;Santa Bárbara do Leste
+2024;Municipal;31;MG;315727;Santa Bárbara do Monte Verde
+2024;Municipal;31;MG;315730;Santa Bárbara do Tugúrio
+2024;Municipal;31;MG;315733;Santa Cruz de Minas
+2024;Municipal;31;MG;315737;Santa Cruz de Salinas
+2024;Municipal;31;MG;315740;Santa Cruz do Escalvado
+2024;Municipal;31;MG;315750;Santa Efigênia de Minas
+2024;Municipal;31;MG;315760;Santa Fé de Minas
+2024;Municipal;31;MG;315765;Santa Helena de Minas
+2024;Municipal;31;MG;315770;Santa Juliana
+2024;Municipal;31;MG;315780;Santa Luzia
+2024;Municipal;31;MG;315790;Santa Margarida
+2024;Municipal;31;MG;315800;Santa Maria de Itabira
+2024;Municipal;31;MG;315810;Santa Maria do Salto
+2024;Municipal;31;MG;315820;Santa Maria do Suaçuí
+2024;Municipal;31;MG;315830;Santana da Vargem
+2024;Municipal;31;MG;315840;Santana de Cataguases
+2024;Municipal;31;MG;315850;Santana de Pirapama
+2024;Municipal;31;MG;315860;Santana do Deserto
+2024;Municipal;31;MG;315870;Santana do Garambéu
+2024;Municipal;31;MG;315880;Santana do Jacaré
+2024;Municipal;31;MG;315890;Santana do Manhuaçu
+2024;Municipal;31;MG;315895;Santana do Paraíso
+2024;Municipal;31;MG;315900;Santana do Riacho
+2024;Municipal;31;MG;315910;Santana dos Montes
+2024;Municipal;31;MG;315920;Santa Rita de Caldas
+2024;Municipal;31;MG;315930;Santa Rita de Jacutinga
+2024;Municipal;31;MG;315935;Santa Rita de Minas
+2024;Municipal;31;MG;315940;Santa Rita de Ibitipoca
+2024;Municipal;31;MG;315950;Santa Rita do Itueto
+2024;Municipal;31;MG;315960;Santa Rita do Sapucaí
+2024;Municipal;31;MG;315970;Santa Rosa da Serra
+2024;Municipal;31;MG;315980;Santa Vitória
+2024;Municipal;31;MG;315990;Santo Antônio do Amparo
+2024;Municipal;31;MG;316000;Santo Antônio do Aventureiro
+2024;Municipal;31;MG;316010;Santo Antônio do Grama
+2024;Municipal;31;MG;316020;Santo Antônio do Itambé
+2024;Municipal;31;MG;316030;Santo Antônio do Jacinto
+2024;Municipal;31;MG;316040;Santo Antônio do Monte
+2024;Municipal;31;MG;316045;Santo Antônio do Retiro
+2024;Municipal;31;MG;316050;Santo Antônio do Rio Abaixo
+2024;Municipal;31;MG;316060;Santo Hipólito
+2024;Municipal;31;MG;316070;Santos Dumont
+2024;Municipal;31;MG;316080;São Bento Abade
+2024;Municipal;31;MG;316090;São Brás do Suaçuí
+2024;Municipal;31;MG;316095;São Domingos das Dores
+2024;Municipal;31;MG;316100;São Domingos do Prata
+2024;Municipal;31;MG;316105;São Félix de Minas
+2024;Municipal;31;MG;316110;São Francisco
+2024;Municipal;31;MG;316120;São Francisco de Paula
+2024;Municipal;31;MG;316130;São Francisco de Sales
+2024;Municipal;31;MG;316140;São Francisco do Glória
+2024;Municipal;31;MG;316150;São Geraldo
+2024;Municipal;31;MG;316160;São Geraldo da Piedade
+2024;Municipal;31;MG;316165;São Geraldo do Baixio
+2024;Municipal;31;MG;316170;São Gonçalo do Abaeté
+2024;Municipal;31;MG;316180;São Gonçalo do Pará
+2024;Municipal;31;MG;316190;São Gonçalo do Rio Abaixo
+2024;Municipal;31;MG;316200;São Gonçalo do Sapucaí
+2024;Municipal;31;MG;316210;São Gotardo
+2024;Municipal;31;MG;316220;São João Batista do Glória
+2024;Municipal;31;MG;316225;São João da Lagoa
+2024;Municipal;31;MG;316230;São João da Mata
+2024;Municipal;31;MG;316240;São João da Ponte
+2024;Municipal;31;MG;316245;São João das Missões
+2024;Municipal;31;MG;316250;São João del Rei
+2024;Municipal;31;MG;316255;São João do Manhuaçu
+2024;Municipal;31;MG;316257;São João do Manteninha
+2024;Municipal;31;MG;316260;São João do Oriente
+2024;Municipal;31;MG;316265;São João do Pacuí
+2024;Municipal;31;MG;316270;São João do Paraíso
+2024;Municipal;31;MG;316280;São João Evangelista
+2024;Municipal;31;MG;316290;São João Nepomuceno
+2024;Municipal;31;MG;316292;São Joaquim de Bicas
+2024;Municipal;31;MG;316294;São José da Barra
+2024;Municipal;31;MG;316295;São José da Lapa
+2024;Municipal;31;MG;316300;São José da Safira
+2024;Municipal;31;MG;316310;São José da Varginha
+2024;Municipal;31;MG;316320;São José do Alegre
+2024;Municipal;31;MG;316330;São José do Divino
+2024;Municipal;31;MG;316340;São José do Goiabal
+2024;Municipal;31;MG;316350;São José do Jacuri
+2024;Municipal;31;MG;316360;São José do Mantimento
+2024;Municipal;31;MG;316370;São Lourenço
+2024;Municipal;31;MG;316380;São Miguel do Anta
+2024;Municipal;31;MG;316390;São Pedro da União
+2024;Municipal;31;MG;316400;São Pedro dos Ferros
+2024;Municipal;31;MG;316410;São Pedro do Suaçuí
+2024;Municipal;31;MG;316420;São Romão
+2024;Municipal;31;MG;316430;São Roque de Minas
+2024;Municipal;31;MG;316440;São Sebastião da Bela Vista
+2024;Municipal;31;MG;316443;São Sebastião da Vargem Alegre
+2024;Municipal;31;MG;316447;São Sebastião do Anta
+2024;Municipal;31;MG;316450;São Sebastião do Maranhão
+2024;Municipal;31;MG;316460;São Sebastião do Oeste
+2024;Municipal;31;MG;316470;São Sebastião do Paraíso
+2024;Municipal;31;MG;316480;São Sebastião do Rio Preto
+2024;Municipal;31;MG;316490;São Sebastião do Rio Verde
+2024;Municipal;31;MG;316500;São Tiago
+2024;Municipal;31;MG;316510;São Tomás de Aquino
+2024;Municipal;31;MG;316520;São Thomé das Letras
+2024;Municipal;31;MG;316530;São Vicente de Minas
+2024;Municipal;31;MG;316540;Sapucaí-Mirim
+2024;Municipal;31;MG;316550;Sardoá
+2024;Municipal;31;MG;316553;Sarzedo
+2024;Municipal;31;MG;316555;Setubinha
+2024;Municipal;31;MG;316556;Sem-Peixe
+2024;Municipal;31;MG;316557;Senador Amaral
+2024;Municipal;31;MG;316560;Senador Cortes
+2024;Municipal;31;MG;316570;Senador Firmino
+2024;Municipal;31;MG;316580;Senador José Bento
+2024;Municipal;31;MG;316590;Senador Modestino Gonçalves
+2024;Municipal;31;MG;316600;Senhora de Oliveira
+2024;Municipal;31;MG;316610;Senhora do Porto
+2024;Municipal;31;MG;316620;Senhora dos Remédios
+2024;Municipal;31;MG;316630;Sericita
+2024;Municipal;31;MG;316640;Seritinga
+2024;Municipal;31;MG;316650;Serra Azul de Minas
+2024;Municipal;31;MG;316660;Serra da Saudade
+2024;Municipal;31;MG;316670;Serra dos Aimorés
+2024;Municipal;31;MG;316680;Serra do Salitre
+2024;Municipal;31;MG;316690;Serrania
+2024;Municipal;31;MG;316695;Serranópolis de Minas
+2024;Municipal;31;MG;316700;Serranos
+2024;Municipal;31;MG;316710;Serro
+2024;Municipal;31;MG;316720;Sete Lagoas
+2024;Municipal;31;MG;316730;Silveirânia
+2024;Municipal;31;MG;316740;Silvianópolis
+2024;Municipal;31;MG;316750;Simão Pereira
+2024;Municipal;31;MG;316760;Simonésia
+2024;Municipal;31;MG;316770;Sobrália
+2024;Municipal;31;MG;316780;Soledade de Minas
+2024;Municipal;31;MG;316790;Tabuleiro
+2024;Municipal;31;MG;316800;Taiobeiras
+2024;Municipal;31;MG;316805;Taparuba
+2024;Municipal;31;MG;316810;Tapira
+2024;Municipal;31;MG;316820;Tapiraí
+2024;Municipal;31;MG;316830;Taquaraçu de Minas
+2024;Municipal;31;MG;316840;Tarumirim
+2024;Municipal;31;MG;316850;Teixeiras
+2024;Municipal;31;MG;316860;Teófilo Otoni
+2024;Municipal;31;MG;316870;Timóteo
+2024;Municipal;31;MG;316880;Tiradentes
+2024;Municipal;31;MG;316890;Tiros
+2024;Municipal;31;MG;316900;Tocantins
+2024;Municipal;31;MG;316905;Tocos do Moji
+2024;Municipal;31;MG;316910;Toledo
+2024;Municipal;31;MG;316920;Tombos
+2024;Municipal;31;MG;316930;Três Corações
+2024;Municipal;31;MG;316935;Três Marias
+2024;Municipal;31;MG;316940;Três Pontas
+2024;Municipal;31;MG;316950;Tumiritinga
+2024;Municipal;31;MG;316960;Tupaciguara
+2024;Municipal;31;MG;316970;Turmalina
+2024;Municipal;31;MG;316980;Turvolândia
+2024;Municipal;31;MG;316990;Ubá
+2024;Municipal;31;MG;317000;Ubaí
+2024;Municipal;31;MG;317005;Ubaporanga
+2024;Municipal;31;MG;317010;Uberaba
+2024;Municipal;31;MG;317020;Uberlândia
+2024;Municipal;31;MG;317030;Umburatiba
+2024;Municipal;31;MG;317040;Unaí
+2024;Municipal;31;MG;317043;União de Minas
+2024;Municipal;31;MG;317047;Uruana de Minas
+2024;Municipal;31;MG;317050;Urucânia
+2024;Municipal;31;MG;317052;Urucuia
+2024;Municipal;31;MG;317057;Vargem Alegre
+2024;Municipal;31;MG;317060;Vargem Bonita
+2024;Municipal;31;MG;317065;Vargem Grande do Rio Pardo
+2024;Municipal;31;MG;317070;Varginha
+2024;Municipal;31;MG;317075;Varjão de Minas
+2024;Municipal;31;MG;317080;Várzea da Palma
+2024;Municipal;31;MG;317090;Varzelândia
+2024;Municipal;31;MG;317100;Vazante
+2024;Municipal;31;MG;317103;Verdelândia
+2024;Municipal;31;MG;317107;Veredinha
+2024;Municipal;31;MG;317110;Veríssimo
+2024;Municipal;31;MG;317115;Vermelho Novo
+2024;Municipal;31;MG;317120;Vespasiano
+2024;Municipal;31;MG;317130;Viçosa
+2024;Municipal;31;MG;317140;Vieiras
+2024;Municipal;31;MG;317150;Mathias Lobato
+2024;Municipal;31;MG;317160;Virgem da Lapa
+2024;Municipal;31;MG;317170;Virgínia
+2024;Municipal;31;MG;317180;Virginópolis
+2024;Municipal;31;MG;317190;Virgolândia
+2024;Municipal;31;MG;317200;Visconde do Rio Branco
+2024;Municipal;31;MG;317210;Volta Grande
+2024;Municipal;31;MG;317220;Wenceslau Braz
