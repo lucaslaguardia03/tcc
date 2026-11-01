@@ -33,7 +33,8 @@ transf_fundeb <- stn_transferencias %>%
       "FUNDEB - COUN VAAR",
       "AJUSTE FUNDEB - AJUSTE FUNDEB VAAR",
       "FUNDEB - COUN VAAF",
-      "AJUSTE FUNDEB - AJUSTE FUNDEB VAAF"
+      "AJUSTE FUNDEB - AJUSTE FUNDEB VAAF",
+      "FUNDEB - FUNDEB - FTI"
     )
   ) %>%
   group_by(cod_ibge) %>%
@@ -51,7 +52,8 @@ compl_uni<- stn_transferencias %>%
       "FUNDEB - COUN VAAR",
       "AJUSTE FUNDEB - AJUSTE FUNDEB VAAR",
       "FUNDEB - COUN VAAF",
-      "AJUSTE FUNDEB - AJUSTE FUNDEB VAAF"
+      "AJUSTE FUNDEB - AJUSTE FUNDEB VAAF",
+      "FUNDEB - FUNDEB - FTI"
     )
   ) %>%
   group_by(cod_ibge) %>%
@@ -98,6 +100,19 @@ compl_vaar <- stn_transferencias %>%
     compl_vaar = sum(VL_CONSOLIDADO, na.rm = TRUE),
     .groups = "drop"
   )
+
+# Complementações ETI
+compl_eti <- stn_transferencias %>%
+  filter(
+    transferencia %in% c(
+      "FUNDEB - FUNDEB - FTI")
+  ) %>%
+  group_by(cod_ibge) %>%
+  summarise(
+    compl_eti = sum(VL_CONSOLIDADO, na.rm = TRUE),
+    .groups = "drop"
+  )
+
 
 # Royalties Educação (75% do total)
 royalty_educ <- royalties %>% filter(!is.na(cod_ibge)) %>% select(royalty_educ, cod_ibge)
@@ -172,6 +187,7 @@ compl_uni <- mutate(compl_uni, cod_ibge = as.character(cod_ibge))
 compl_vaat <- mutate(compl_vaat, cod_ibge = as.character(cod_ibge))
 compl_vaaf <- mutate(compl_vaaf, cod_ibge = as.character(cod_ibge))
 compl_vaar <- mutate(compl_vaar, cod_ibge = as.character(cod_ibge))
+compl_eti <- mutate(compl_eti, cod_ibge = as.character(cod_ibge))
 royalty_educ <- mutate(royalty_educ, cod_ibge = as.character(cod_ibge))
 contrib_fundeb <- mutate(contrib_fundeb, cod_ibge = as.character(cod_ibge))
 impadd_fundeb <- mutate(impadd_fundeb, cod_ibge = as.character(cod_ibge))
@@ -186,6 +202,7 @@ base_2025 <- rectot_fundeb %>%
   left_join(compl_vaat, by = "cod_ibge") %>%
   left_join(compl_vaaf, by = "cod_ibge") %>%
   left_join(compl_vaar, by = "cod_ibge") %>%
+  left_join(compl_eti, by = "cod_ibge") %>%
   left_join(royalty_educ, by = "cod_ibge") %>%
   left_join(contrib_fundeb, by = "cod_ibge") %>%
   left_join(impadd_fundeb, by = "cod_ibge") %>%
@@ -232,7 +249,7 @@ base_2025 <- base_2025 %>%
 base_2025 <- base_2025 %>%
   select(
     ano, ente, cod_uf, sig_uf, cod_ibge, nom_ente,
-    rectot_fundeb, transf_fundeb, compl_uni, compl_vaaf, compl_vaat, compl_vaar,
+    rectot_fundeb, transf_fundeb, compl_uni, compl_vaaf, compl_vaat, compl_vaar, compl_eti,
     royalty_educ, contrib_fundeb, impadd_fundeb, impadd_mde, sal_educ, prog_fnde,
     outrec_educ, recadd_educ, rectot_educ, defla_ipca, mat_censo
   )
