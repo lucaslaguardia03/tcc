@@ -18,7 +18,6 @@ d <- tibble(
   cod_ibge = as.character(raw$cod_ibge),
   var      = as.numeric(raw[["variacao_recfundeb_18-25"]]),     # variação %
   rec      = as.numeric(raw$rec_educ_por_mat) / 1000,           # R$ mil
-  rcl      = as.numeric(raw$receita_corrente_liquida_pc) / 1000,# R$ mil
   cad      = as.numeric(raw$pct_pop_cadunico),
   rural    = as.numeric(raw$pct_mat_rural),
   creche   = as.numeric(raw$pct_mat_creche),
@@ -39,7 +38,7 @@ cat("Municípios:", n, "\n")
 arred <- function(x, k = 4) ifelse(is.numeric(x), round(x, k), x)
 
 # ------------------------------------------------------------ utilitários
-rhs_fiscal_lin <- "rec + rcl + cad"
+rhs_fiscal_lin <- "rec + cad"
 rhs_comp_lin   <- "rural + creche + especial + qi + eja + integral"
 
 fml <- function(rhs, dep_log) as.formula(paste(if (dep_log) "ylog" else "var", "~", rhs))
@@ -105,7 +104,7 @@ escolhe <- function(tab) {
 
 # ============================================================ 1) CORRELAÇÕES
 cor_linhas <- list()
-xs <- c(rec = "Receita total vinculada/matrícula (R$ mil)", rcl = "RCL per capita (R$ mil)",
+xs <- c(rec = "Receita total vinculada/matrícula (R$ mil)",
         cad = "CadÚnico (%)", rural = "Matrículas rurais (%)", creche = "Matrículas em creche (%)",
         especial = "Matrículas em educação especial (%)", qi = "Matrículas quilombolas/indígenas (%)",
         eja = "Matrículas em EJA (%)", integral = "Matrículas em tempo integral (%)")
@@ -133,7 +132,7 @@ for (dl in c(FALSE, TRUE)) {
 s2 <- bind_rows(s2)
 # Box-Cox sobre a razão (modelo conjunto)
 bc <- tryCatch({
-  fit_bc <- lm(razao ~ rec + rcl + cad + rural + creche + especial + qi + eja + integral, data = d)
+  fit_bc <- lm(razao ~ rec + cad + rural + creche + especial + qi + eja + integral, data = d)
   b <- MASS::boxcox(fit_bc, lambda = seq(-2, 2, 0.01), plotit = FALSE)
   lam <- b$x[which.max(b$y)]
   ic <- b$x[b$y > max(b$y) - qchisq(0.95, 1) / 2]
@@ -145,10 +144,10 @@ DEP_LOG <- tot_bic$bic_total[tot_bic$dependente == "ln(razão)"] < tot_bic$bic_t
 cat("Dependente escolhida:", if (DEP_LOG) "ln(razão)" else "nível", "\n")
 
 # =========================================== 3) FORMA DO BLOCO FISCAL
-# 3a) receita total vinculada por matrícula (RCL e CadÚnico lineares)
+# 3a) receita total vinculada por matrícula (CadÚnico linear)
 best_knot <- function(dep_log) {
   g <- seq(5, 9, by = 0.25)
-  bics <- sapply(g, function(k) BIC(lm(fml(paste("rec + pmax(rec -", k, ", 0) + rcl + cad"), dep_log), data = d)))
+  bics <- sapply(g, function(k) BIC(lm(fml(paste("rec + pmax(rec -", k, ", 0) + cad"), dep_log), data = d)))
   g[which.min(bics)]
 }
 KNOT <- best_knot(DEP_LOG)
@@ -165,8 +164,8 @@ rec_formas <- list(
 )
 s3a <- list(); fits3a <- list()
 for (nm in names(rec_formas)) {
-  rhs <- paste(rec_formas[[nm]][[1]], "+ rcl + cad")
-  nest <- if (is.na(rec_formas[[nm]][[2]])) NA else paste(rec_formas[[nm]][[2]], "+ rcl + cad")
+  rhs <- paste(rec_formas[[nm]][[1]], "+ cad")
+  nest <- if (is.na(rec_formas[[nm]][[2]])) NA else paste(rec_formas[[nm]][[2]], "+ cad")
   r <- avalia(rhs, DEP_LOG, "Fiscal: forma da receita", nm, nest)
   s3a[[nm]] <- r$linha; fits3a[[nm]] <- r$fit
 }
@@ -175,34 +174,23 @@ i <- escolhe(s3a); REC_ESC <- s3a$forma[i]; REC_RHS <- rec_formas[[REC_ESC]][[1]
 cat("Forma da receita escolhida:", REC_ESC, "\n")
 
 # GAM como referência flexível (graus de liberdade efetivos)
-gam_fit <- gam(as.formula(paste(if (DEP_LOG) "ylog" else "var", "~ s(rec) + rcl + cad")), data = d, method = "REML")
+gam_fit <- gam(as.formula(paste(if (DEP_LOG) "ylog" else "var", "~ s(rec) + cad")), data = d, method = "REML")
 gs <- summary(gam_fit)
 gam_tab <- tibble::tibble(
   termo = "s(receita total vinculada/matrícula)", edf = gs$s.table[1, "edf"], p = gs$s.table[1, "p-value"],
   leitura = "edf próximo de 1 = relação aproximadamente linear; edf > 2 = curva", r2_ajustado = gs$r.sq)
 
-# 3b) RCL
-rcl_formas <- list(linear = list("rcl", NA), ln = list("log(rcl)", NA), quadratica = list("rcl + I(rcl^2)", "rcl"))
-s3b <- list()
-for (nm in names(rcl_formas)) {
-  r <- avalia(paste(REC_RHS, "+", rcl_formas[[nm]][[1]], "+ cad"), DEP_LOG, "Fiscal: forma da RCL", nm,
-              if (is.na(rcl_formas[[nm]][[2]])) NA else paste(REC_RHS, "+", rcl_formas[[nm]][[2]], "+ cad"))
-  s3b[[nm]] <- r$linha
-}
-s3b <- bind_rows(s3b); i <- escolhe(s3b); RCL_ESC <- s3b$forma[i]; RCL_RHS <- rcl_formas[[RCL_ESC]][[1]]
-cat("Forma da RCL escolhida:", RCL_ESC, "\n")
-
-# 3c) CadÚnico
+# 3b) CadÚnico
 cad_formas <- list(linear = list("cad", NA), ln = list("log(cad)", NA), quadratica = list("cad + I(cad^2)", "cad"))
 s3c <- list()
 for (nm in names(cad_formas)) {
-  r <- avalia(paste(REC_RHS, "+", RCL_RHS, "+", cad_formas[[nm]][[1]]), DEP_LOG, "Fiscal: forma do CadÚnico", nm,
-              if (is.na(cad_formas[[nm]][[2]])) NA else paste(REC_RHS, "+", RCL_RHS, "+", cad_formas[[nm]][[2]]))
+  r <- avalia(paste(REC_RHS, "+", cad_formas[[nm]][[1]]), DEP_LOG, "Fiscal: forma do CadÚnico", nm,
+              if (is.na(cad_formas[[nm]][[2]])) NA else paste(REC_RHS, "+", cad_formas[[nm]][[2]]))
   s3c[[nm]] <- r$linha
 }
 s3c <- bind_rows(s3c); i <- escolhe(s3c); CAD_ESC <- s3c$forma[i]; CAD_RHS <- cad_formas[[CAD_ESC]][[1]]
 cat("Forma do CadÚnico escolhida:", CAD_ESC, "\n")
-RHS_FISCAL_FINAL <- paste(REC_RHS, "+", RCL_RHS, "+", CAD_RHS)
+RHS_FISCAL_FINAL <- paste(REC_RHS, "+", CAD_RHS)
 
 # ==================================== 4) FORMA DO BLOCO COMPOSIÇÃO
 sq <- "I(rural^2) + I(creche^2) + I(especial^2) + I(qi^2) + I(eja^2) + I(integral^2)"
@@ -239,10 +227,10 @@ tabela_coef <- function(fit, nome_modelo, dep_log) {
 fit_fisc_novo <- lm(fml(RHS_FISCAL_FINAL, DEP_LOG), data = d)
 fit_comp_novo <- lm(fml(COMP_RHS, DEP_LOG), data = d)
 fit_conj_novo <- lm(fml(paste(RHS_FISCAL_FINAL, "+", COMP_RHS), DEP_LOG), data = d)
-fit_fisc_velho <- lm(var ~ rec + rcl + cad, data = d)
+fit_fisc_velho <- lm(var ~ rec + cad, data = d)
 fit_comp_velho <- lm(var ~ rural + creche + especial + qi + eja + integral, data = d)
-fit_conj_velho <- lm(var ~ rec + rcl + cad + rural + creche + especial + qi + eja + integral, data = d)
-cat("Conferência modelo atual (receita, deve ser -1,27 por R$ mil):",
+fit_conj_velho <- lm(var ~ rec + cad + rural + creche + especial + qi + eja + integral, data = d)
+cat("Modelo linear em nível sem RCL (receita, R$ mil):",
     round(coef(fit_fisc_velho)["rec"], 3), "\n")
 
 coefs <- bind_rows(
@@ -270,7 +258,7 @@ diags <- bind_rows(diag_linha(fit_fisc_novo, "Fiscal NOVO", DEP_LOG), diag_linha
                    diag_linha(fit_conj_velho, "Conjunto ATUAL", FALSE))
 
 # curva da receita: variação prevista (%), demais variáveis na média
-grade <- tibble::tibble(rec = seq(4.5, 14, by = 0.5), rcl = mean(d$rcl), cad = mean(d$cad))
+grade <- tibble::tibble(rec = seq(4.5, 14, by = 0.5), cad = mean(d$cad))
 for (v in c("rural", "creche", "especial", "qi", "eja", "integral")) grade[[v]] <- mean(d[[v]])
 pp <- function(fit, dep_log) {
   p <- predict(fit, newdata = grade)
@@ -295,8 +283,7 @@ mk <- function(bloco, var, pad, f_velho, f_novo) {
                  mesma_conclusao_a_5pct = (a["p"] < 0.05) == (b["p"] < 0.05))
 }
 comp_tab[[1]] <- mk("Fiscal", "rec", "rec|ns\\(rec|cut\\(rec", fit_fisc_velho, fit_fisc_novo)
-comp_tab[[2]] <- mk("Fiscal", "rcl", "rcl", fit_fisc_velho, fit_fisc_novo)
-comp_tab[[3]] <- mk("Fiscal", "cad", "cad", fit_fisc_velho, fit_fisc_novo)
+comp_tab[[2]] <- mk("Fiscal", "cad", "cad", fit_fisc_velho, fit_fisc_novo)
 for (v in c("rural", "creche", "especial", "qi", "eja", "integral"))
   comp_tab[[length(comp_tab) + 1]] <- mk("Composição", v, paste0("(^|[(])", v, "([)]|$|\\^)"), fit_comp_velho, fit_comp_novo)
 comparacao <- bind_rows(comp_tab)
@@ -309,7 +296,7 @@ sens <- list()
 rodar_spline <- function(dados, knot, rotulo, dep_log = DEP_LOG, dep_col = NULL) {
   dd <- dados; dd$yy <- if (dep_log) dd$ylog else dd$var
   if (!is.null(dep_col)) dd$yy <- dep_col
-  ft <- lm(yy ~ rec + pmax(rec - knot, 0) + log(rcl) + cad, data = dd)
+  ft <- lm(yy ~ rec + pmax(rec - knot, 0) + cad, data = dd)
   V <- vcovHC(ft, type = "HC3"); b <- coef(ft)
   i1 <- "rec"; i2 <- "pmax(rec - knot, 0)"
   nm <- names(b); j1 <- which(nm == "rec"); j2 <- grep("pmax", nm)
@@ -337,8 +324,8 @@ fit_conj_tmp <- lm(fml(paste(RHS_FISCAL_FINAL, "+", COMP_RHS), DEP_LOG), data = 
 
 
 # ============================================ 7) TABELAS PRONTAS PARA O TEXTO
-# Tudo abaixo reaproveita as escolhas feitas acima (DEP_LOG, REC_RHS, RCL_RHS, CAD_RHS, COMP_RHS).
-stopifnot(DEP_LOG, grepl("pmax", REC_RHS), RCL_RHS == "log(rcl)", CAD_RHS == "cad", COMP_ESC == "linear")
+# Tudo abaixo reaproveita as escolhas feitas acima (DEP_LOG, REC_RHS, CAD_RHS, COMP_RHS).
+stopifnot(DEP_LOG, grepl("pmax", REC_RHS), CAD_RHS == "cad", COMP_ESC == "linear")
 virg <- function(x, k = 2) { ifelse(is.na(x), "–", gsub("[.]", ",", formatC(round(x, k), format = "f", digits = k, big.mark = ""))) }
 virg <- function(x, k = 2) { r <- ifelse(is.na(x), "–", formatC(x, format = "f", digits = k)); r <- gsub("-", "−", r); gsub("[.]", ",", r) }
 fp <- function(p) ifelse(is.na(p), "–", ifelse(p < 0.001, "<0,001", gsub("[.]", ",", formatC(p, format = "f", digits = 3))))
@@ -346,7 +333,7 @@ est <- function(p) ifelse(is.na(p), "", ifelse(p < 0.01, "***", ifelse(p < 0.05,
 fnum <- function(x) format(round(x), big.mark = ".", decimal.mark = ",", scientific = FALSE)
 
 DEPN <- "ylog"                     # dependente escolhida
-RHS_F_K <- function(k, rcl = "log(rcl)") paste0("rec + pmax(rec - ", k, ", 0) + ", rcl, " + cad")
+RHS_F_K <- function(k) paste0("rec + pmax(rec - ", k, ", 0) + cad")
 fator_pp <- function(ft) 100 * mean(exp(fitted(ft)) * mean(exp(residuals(ft))))  # converte coef (log) em p.p. médios
 vcv <- function(ft) vcovHC(ft, type = "HC3")
 
@@ -359,7 +346,7 @@ f_robusto <- function(ft) {
   q <- nrow(R); F <- as.numeric(W) / q
   c(F = F, p = pf(F, q, ft$df.residual, lower.tail = FALSE))
 }
-cat("Conferência F robusto do modelo fiscal ATUAL (esperado 4,03):", round(f_robusto(fit_fisc_velho)["F"], 2), "\n")
+cat("F robusto do modelo fiscal linear em nível:", round(f_robusto(fit_fisc_velho)["F"], 2), "\n")
 
 # ---- Tabela 17 (fiscal) e Tabela 18 (composição): modelos finais
 tab_coef_log <- function(ft, termos, rotulos, dat = d, beta = TRUE) {
@@ -391,8 +378,7 @@ segmentos <- function(ft, knot) {
 }
 t17 <- bind_rows(
   segmentos(fit_F, 6.5) %>% mutate(variavel = c("Receita total vinculada, até R$ 6.500 (R$ 1.000)", "Receita total vinculada, acima de R$ 6.500 (R$ 1.000)")),
-  tab_coef_log(fit_F, c("log(rcl)", "cad"), c("RCL per capita (ln)", "População no CadÚnico (p.p.)")))
-t17$efeito_pp[3] <- coef(fit_F)["log(rcl)"] * log(1.1) * fator_pp(fit_F)   # efeito de +10% de RCL
+  tab_coef_log(fit_F, c("cad"), c("População no CadÚnico (p.p.)")))
 rodape17 <- tibble::tibble(constante = coef(fit_F)[1] * 100, r2 = summary(fit_F)$r.squared, r2aj = summary(fit_F)$adj.r.squared,
                            F = f_robusto(fit_F)["F"], p_F = f_robusto(fit_F)["p"], ep_res = 100 * summary(fit_F)$sigma)
 t18 <- tab_coef_log(fit_C, c("rural", "creche", "especial", "qi", "eja", "integral"),
@@ -422,9 +408,9 @@ diag_novo <- function(ft, vars) {
                  lev_max_cook = hatvalues(ft)[which.max(cd)], cod_max_stud = d$cod_ibge[which.max(abs(rs))],
                  max_stud = rs[which.max(abs(rs))])
 }
-vf <- c("rec", "rcl", "cad"); vc <- c("rural", "creche", "especial", "qi", "eja", "integral")
+vf <- c("rec", "cad"); vc <- c("rural", "creche", "especial", "qi", "eja", "integral")
 dg <- bind_rows(Fiscal = diag_novo(fit_F, vf), Composicao = diag_novo(fit_C, vc), Conjunto = diag_novo(fit_J, c(vf, vc)), .id = "modelo")
-vif_porte <- max(vif_niveis(c(vf, vc)), 1 / (1 - summary(lm(log(mat) ~ rec + rcl + cad + rural + creche + especial + qi + eja + integral, data = d))$r.squared))
+vif_porte <- max(vif_niveis(c(vf, vc)), 1 / (1 - summary(lm(log(mat) ~ rec + cad + rural + creche + especial + qi + eja + integral, data = d))$r.squared))
 fm <- function(x, k = 2) virg(x, k)
 tabA1 <- data.frame(
   Diagnostico = c("Maior VIF", "RESET (potências 2 e 3): F (p)", "Breusch-Pagan: χ² (p)", "Shapiro-Wilk: W (p)",
@@ -445,8 +431,8 @@ efeitos_fiscal <- function(ft, knot, dep_log, porte = NULL) {
   if (!dep_log) { nm <- names(b); j1 <- which(nm == "rec"); j2 <- grep("pmax", nm); V <- vcv(ft)
     seg$efeito_pp <- c(b[j1], b[j1] + b[j2]) }
   pr <- function(nome) { j <- which(rownames(ct) == nome); list(ef = unname(b[j] * log(1.1) * fac), p = unname(ct[j, 4])) }
-  rc <- pr("log(rcl)"); cj <- which(rownames(ct) == "cad")
-  out <- list(ab = seg$efeito_pp[1], p_ab = seg$p[1], ac = seg$efeito_pp[2], p_ac = seg$p[2], rcl = rc$ef, p_rcl = rc$p,
+  cj <- which(rownames(ct) == "cad")
+  out <- list(ab = seg$efeito_pp[1], p_ab = seg$p[1], ac = seg$efeito_pp[2], p_ac = seg$p[2],
               cad = unname(b[cj] * fac), p_cad = unname(ct[cj, 4]), porte = NA_real_, p_porte = NA_real_)
   if (!is.null(porte)) { q <- pr(porte); out$porte <- q$ef; out$p_porte <- q$p }
   out
@@ -469,12 +455,12 @@ fisc_rows <- lapply(fiscal_specs, function(sp) {
   ft <- spec_lin(sp[[2]], sp[[3]], sp[[4]]); ef <- efeitos_fiscal(ft, sp[[5]], sp[[3]] == "ylog", sp[[6]])
   tibble::tibble(Especificacao = sp[[1]],
                  Abaixo = paste0(virg(ef$ab, 1), est(ef$p_ab)), Acima = paste0(virg(ef$ac, 1), est(ef$p_ac)),
-                 RCL10 = paste0(virg(ef$rcl, 2), est(ef$p_rcl)), CadUnico = paste0(virg(ef$cad, 2), est(ef$p_cad)),
+                 CadUnico = paste0(virg(ef$cad, 2), est(ef$p_cad)),
                  Porte10 = ifelse(is.na(ef$porte), "–", paste0(virg(ef$porte, 2), est(ef$p_porte))),
                  n = nrow(sp[[2]]), R2aj = virg(summary(ft)$adj.r.squared, 3), reset_p = fp(resettest(ft, power = 2:3, type = "fitted")$p.value),
-                 p_abaixo_num = ef$p_ab, p_rcl_num = ef$p_rcl, ab_num = ef$ab, ac_num = ef$ac, p_ac_num = ef$p_ac)
+                 p_abaixo_num = ef$p_ab, ab_num = ef$ab, ac_num = ef$ac, p_ac_num = ef$p_ac)
 }) %>% bind_rows()
-tabB1 <- fisc_rows %>% dplyr::select(Especificacao, Abaixo, Acima, RCL10, CadUnico, Porte10, n, R2aj, reset_p)
+tabB1 <- fisc_rows %>% dplyr::select(Especificacao, Abaixo, Acima, CadUnico, Porte10, n, R2aj, reset_p)
 
 comp_term_fmt <- function(ft, fac) {
   ct <- coeftest(ft, vcov = vcv(ft)); b <- coef(ft)
@@ -525,14 +511,12 @@ C1_dep <- data.frame(Bloco = "Variável dependente (modelo conjunto, formas line
                      escolhida = c(FALSE, TRUE), check.names = FALSE)
 s3a_u <- s3a[s3a$forma != "spline_linear_nó_buscado", ]
 C1_rec <- linhaC(s3a_u, rot, "Receita total vinculada por matrícula (R, em R$ mil)", REC_ESC)
-rot2 <- c(linear = "RCL", ln = "ln RCL", quadratica = "RCL + RCL²")
-C2_rcl <- linhaC(s3b, rot2, "RCL per capita", RCL_ESC)
 rot3 <- c(linear = "CadÚnico", ln = "ln CadÚnico", quadratica = "CadÚnico + CadÚnico²")
 C2_cad <- linhaC(s3c, rot3, "População no CadÚnico", CAD_ESC)
 rot4 <- c(linear = "Percentuais lineares", linear_mais_quadrados = "Lineares + quadrados", ln1p = "ln(1 + percentual)",
           linear_mais_dummies_de_zero = "Lineares + dummies de zero", ln1p_mais_dummies_de_zero = "ln(1 + percentual) + dummies de zero")
 C2_comp <- linhaC(s4, rot4, "Composição das matrículas", COMP_ESC)
-tabC1 <- bind_rows(C1_dep, C1_rec); tabC2 <- bind_rows(C2_rcl, C2_cad, C2_comp)
+tabC1 <- bind_rows(C1_dep, C1_rec); tabC2 <- bind_rows(C2_cad, C2_comp)
 
 # ---- números auxiliares para o texto
 aux <- tibble::tibble(
@@ -546,16 +530,16 @@ aux <- tibble::tibble(
 
 # ================================================================ SAÍDA
 escolhas <- tibble::tibble(
-  decisao = c("Variável dependente", "Forma da receita (bloco fiscal)", "Forma da RCL", "Forma do CadÚnico",
+  decisao = c("Variável dependente", "Forma da receita (bloco fiscal)", "Forma do CadÚnico",
               "Forma da composição", "Nó do spline buscado (R$ mil)"),
   escolha = c(if (DEP_LOG) "ln(razão) = ln(1 + variação/100)" else "variação % em nível",
-              REC_ESC, RCL_ESC, CAD_ESC, COMP_ESC, as.character(KNOT)),
+              REC_ESC, CAD_ESC, COMP_ESC, as.character(KNOT)),
   regra = c("menor BIC comparável (com Jacobiano) somado nos 3 modelos",
-            rep("menor BIC; só abandona o linear se o BIC cair >= 2 e o RMSE de validação cruzada não piorar", 4),
+            rep("menor BIC; só abandona o linear se o BIC cair >= 2 e o RMSE de validação cruzada não piorar", 3),
             "menor BIC em grade de 5 a 9"))
 leia <- data.frame(`Leia-me` = c(
   "Seleção da forma funcional e escolha dos modelos (Tabelas 17 e 18).",
-  "Ordem: (1) correlações em formas alternativas; (2) forma da dependente; (3) forma da receita, RCL e CadÚnico; (4) forma das variáveis de composição; (5) modelos finais e comparação com os atuais.",
+  "Ordem: (1) correlações em formas alternativas; (2) forma da dependente; (3) forma da receita e do CadÚnico; (4) forma das variáveis de composição; (5) modelos finais e comparação com os atuais.",
   "BIC/AIC 'comparáveis': para comparar ln(razão) com a variação em nível, a verossimilhança de ambos é expressa na escala da razão receita2025/receita2018 (ajuste de Jacobiano).",
   "RMSE de validação cruzada: erro de previsão fora da amostra (10 partes x 5 repetições), sempre na escala da variação %.",
   "r2_escala_original: R² entre a variação % observada e a prevista pelo modelo, para comparar modelos com dependentes diferentes.",
@@ -578,13 +562,13 @@ rd <- function(x) { x[] <- lapply(x, function(c) if (is.numeric(c)) round(c, 5) 
 add("Leia-me", leia); add("Escolhas", escolhas)
 add("1_Correlacoes", rd(correlacoes))
 add("2_Dependente", rd(s2)); add("2b_BoxCox", rd(bc))
-add("3a_Receita", rd(s3a)); add("3a_GAM", rd(gam_tab)); add("3b_RCL", rd(s3b)); add("3c_CadUnico", rd(s3c))
+add("3a_Receita", rd(s3a)); add("3a_GAM", rd(gam_tab)); add("3b_CadUnico", rd(s3c))
 add("4_Composicao", rd(s4))
 add("5_Coeficientes", rd(coefs)); add("5_Diagnosticos", rd(diags))
 add("5_Curva_receita", rd(curva)); add("5_Comparacao", rd(comparacao)); add("6_Sensibilidade_no", rd(sens_tab))
 add("T17_Fiscal", tab17_txt); add("T17_rodape", rd(rodape17)); add("T18_Composicao", tab18_txt); add("T18_rodape", rd(rodape18))
 add("TA1_Diagnosticos", tabA1); add("TA1_influentes", rd(dg[, c("modelo","max_cook","cod_max_cook","lev_max_cook","cod_max_stud","max_stud")]))
 add("TB1_Robustez_fiscal", tabB1); add("TB2_Robustez_composicao", tabB2)
-add("TC1_Dependente_receita", tabC1); add("TC2_RCL_Cad_Composicao", tabC2); add("Auxiliares_texto", rd(aux))
+add("TC1_Dependente_receita", tabC1); add("TC2_Cad_Composicao", tabC2); add("Auxiliares_texto", rd(aux))
 saveWorkbook(wb, arq_saida, overwrite = TRUE)
 cat("Arquivo gerado:", arq_saida, "\n")

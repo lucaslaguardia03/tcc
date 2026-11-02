@@ -17,12 +17,11 @@ raw <- read_excel(arq_entrada, sheet = "Planilha2", .name_repair = "minimal")
 d <- data.frame(
   y   = log(1 + as.numeric(raw[["variacao_recfundeb_18-25"]]) / 100) * 100,
   rec = as.numeric(raw$rec_educ_por_mat) / 1000,
-  rcl = log(as.numeric(raw$receita_corrente_liquida_pc) / 1000),
   cad = as.numeric(raw$pct_pop_cadunico)
 )
 d <- d[complete.cases(d), ]
 
-ajusta <- function(x, k) lm(y ~ pmin(rec, k) + pmax(rec - k, 0) + rcl + cad, data = x)
+ajusta <- function(x, k) lm(y ~ pmin(rec, k) + pmax(rec - k, 0) + cad, data = x)
 escolhe_no <- function(x) NOS[which.min(sapply(NOS, function(k) BIC(ajusta(x, k))))]
 t_abaixo <- function(x, k) {
   m <- ajusta(x, k)
@@ -58,7 +57,7 @@ divisao_resumo <- data.frame(
 )
 
 obs <- suppressWarnings(t_max(d))
-m0 <- lm(y ~ rcl + cad, data = d)
+m0 <- lm(y ~ cad, data = d)
 ajustado <- fitted(m0)
 residuo <- resid(m0)
 
